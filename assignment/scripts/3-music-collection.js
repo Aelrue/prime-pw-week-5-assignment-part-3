@@ -1,35 +1,54 @@
 console.log("***** Music Collection *****");
+
 // - Create a variable `collection` that starts as an empty array.
-let collection = [];
 // - Add a function named `addToCollection`. This function should:
 //   - Take in the album's `title`, `artist`, `yearPublished` as input parameters
 //   - Create a new object having the above properties
 //   - Add the new object to the end of the `collection` array
 //   - Return the newly created object
+
+let collection = [];
+
 function addToCollection(title, artist, yearPublished) {
-  this.title = title;
-  this.artist = artist;
-  this.yearPublished = yearPublished;
+  let album = {
+    title: title,
+    artist: artist,
+    yearPublished: yearPublished,
+  };
+
+  collection.push(album);
+
+  return album;
 }
-
-let stopMakingSense = new addToCollection(
-  "Stop Making Sense",
-  "The Talking Heads",
-  "1984"
-);
-let Depeche = new addToCollection("Violator", "Depeche Mode", "1990");
-let hotChip = new addToCollection("One Life Stand", "Hot Chip", "2010");
-let Weezer = new addToCollection("Blue Album", "Weezer", "1994");
-let ninjaParty = new addToCollection("Cool Patrol", "Ninja Sex Party", "2018");
-let Ratatat = new addToCollection("Classics", "Ratatat", "2006");
-
-collection.push(stopMakingSense);
-console.log(collection);
 // - Test the `addToCollection` function:
 //   - Add 6 albums to your collection. Aim to have a mix of both same and different artists and published years. (Feel free to share your musical interests, or make stuff up. Totally fine either way.)
 //   - Console.log each album as added using the returned value.
 //   - After all are added, console.log the `collection` array.
 
+let stopMakingSense = addToCollection(
+  "Stop Making Sense",
+  "The Talking Heads",
+  "1984"
+);
+
+console.log("Added:", stopMakingSense);
+
+let Depeche = addToCollection("Violator", "Depeche Mode", "1990");
+console.log("Added:", Depeche);
+
+let hotChip = addToCollection("One Life Stand", "Hot Chip", "2010");
+console.log("Added:", hotChip);
+
+let Weezer = addToCollection("Blue Album", "Weezer", "1994");
+console.log("Added:", Weezer);
+
+let ninjaParty = addToCollection("Cool Patrol", "Ninja Sex Party", "2018");
+console.log("Added:", ninjaParty);
+
+let Ratatat = addToCollection("Classics", "Ratatat", "2006");
+console.log("Added:", Ratatat);
+
+console.log(collection);
 // - Add a function named `showCollection`. This function should:
 //   - Take in an array parameter. (This allows it to be reused to show any collection, like the results from the find or search.)
 //   - Console.log the number of items in the array.
