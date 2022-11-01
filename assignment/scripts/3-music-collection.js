@@ -7,14 +7,24 @@ let collection = [];
 //   - Add the new object to the end of the `collection` array
 //   - Return the newly created object
 function addToCollection(title, artist, yearPublished) {
-  this.title;
+  this.title = title;
+  this.artist = artist;
+  this.yearPublished = yearPublished;
 }
 
-let = {
-  title: "",
-  artist: "",
-  yearPublished: "",
-};
+let stopMakingSense = new addToCollection(
+  "Stop Making Sense",
+  "The Talking Heads",
+  "1984"
+);
+let Depeche = new addToCollection("Violator", "Depeche Mode", "1990");
+let hotChip = new addToCollection("One Life Stand", "Hot Chip", "2010");
+let Weezer = new addToCollection("Blue Album", "Weezer", "1994");
+let ninjaParty = new addToCollection("Cool Patrol", "Ninja Sex Party", "2018");
+let Ratatat = new addToCollection("Classics", "Ratatat", "2006");
+
+collection.push(stopMakingSense);
+console.log(collection);
 // - Test the `addToCollection` function:
 //   - Add 6 albums to your collection. Aim to have a mix of both same and different artists and published years. (Feel free to share your musical interests, or make stuff up. Totally fine either way.)
 //   - Console.log each album as added using the returned value.
