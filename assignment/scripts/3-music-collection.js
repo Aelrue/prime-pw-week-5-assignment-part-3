@@ -77,23 +77,22 @@ showCollection(collection);
 //   - Take in `artist` (a string) parameter
 //   - Create an array to hold any results, empty to start
 //   - Loop through the `collection` and add any objects with a matching artist to the array.
-function findByArtist(artist) {
-  {
-    let matches = [];
-    for (let i = 0; i < collection.length; i++) {
-      let band = collection[i];
-      if (artist == band.artist) {
-        console.log(band.artist);
-        matches.push(band.artist);
-      }
-    }
-  }
-  console.log("matches has ", matches);
-  return matches;
-}
-console.log(findByArtist("The Talking Heads"));
 
-// I'm missing something here...
+function findByArtist (artist) {
+    let matches = [];
+    for (let i=0; i<collection.length;i++){
+        if (artist === collection[i].artist){
+            matches.push(collection[i]);
+        }
+    } return matches
+}
+
+
+// - Test the `findByArtist` function. Make sure to test with an artist you know is in the collection, as well as an artist you know is not in your collection. 
+// Check that for artists with multiple matches, all are found.
+console.log(findByArtist("Ween"))
+
+console.log(findByArtist("Ratatat"))
 
 //   - Return the array with the matching results. If no results are found, return an empty array.
 
