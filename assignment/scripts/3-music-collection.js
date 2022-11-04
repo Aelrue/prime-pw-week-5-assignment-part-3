@@ -26,15 +26,16 @@ function addToCollection(title, artist, yearPublished) {
 //   - Console.log each album as added using the returned value.
 //   - After all are added, console.log the `collection` array.
 
-let stopMakingSense = addToCollection(
+let talkingHeads = addToCollection(
   "Stop Making Sense",
   "The Talking Heads",
   "1984"
 );
 
-console.log("Added:", stopMakingSense);
+console.log("Added:", talkingHeads);
 
 let Depeche = addToCollection("Violator", "Depeche Mode", "1990");
+
 console.log("Added:", Depeche);
 
 let hotChip = addToCollection("One Life Stand", "Hot Chip", "2010");
@@ -76,6 +77,23 @@ showCollection(collection);
 //   - Take in `artist` (a string) parameter
 //   - Create an array to hold any results, empty to start
 //   - Loop through the `collection` and add any objects with a matching artist to the array.
+function findByArtist(artist) {
+  {
+    let matches = [];
+    for (let i = 0; i < collection.length; i++) {
+      let band = collection[i];
+      if (artist == band.artist) {
+        console.log(band.artist);
+        matches.push(band.artist);
+      }
+    }
+  }
+  console.log("matches has ", matches);
+  return matches;
+}
+console.log(findByArtist("The Talking Heads"));
+
+// I'm missing something here...
 
 //   - Return the array with the matching results. If no results are found, return an empty array.
 
